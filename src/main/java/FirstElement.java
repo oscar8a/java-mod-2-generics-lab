@@ -1,5 +1,7 @@
-class Problem {
-    // declare the getFirstElement method here
+class Getter {
+    static <Gen> String getFirstElement(Gen[] array) {
+        return array[0] != null ? array[0].toString() : null;
+    }
 }
 
 public class FirstElement {
@@ -8,8 +10,8 @@ public class FirstElement {
         Integer[] inputEmpty = new Integer[5];
         String[] inputStr = { "Cake", "Donut", "Cupcake" };
 
-        // System.out.println(Problem.getFirstElement(inputInt)); // 1
-        // System.out.println(Problem.getFirstElement(inputEmpty)); // null
-        // System.out.println(Problem.getFirstElement(inputStr)); // Cake
+        System.out.println(Getter.getFirstElement(inputInt)); // 1
+        System.out.println(Getter.getFirstElement(inputEmpty)); // null
+        System.out.println(Getter.getFirstElement(inputStr)); // Cake
     }
 }
